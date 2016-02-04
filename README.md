@@ -10,4 +10,4 @@
 ### wordcounter: https://wordcounter.net/
 ### htpasswd generator: http://www.htaccesstools.com/htpasswd-generator/
 ### PDF to jpe: http://pdf2jpg.net/
-### Hex to RGB
+### Hex to RGB: http://hex.colorrrs.com/
