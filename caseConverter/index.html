@@ -7,7 +7,6 @@
     <title>Text Case Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="../assets/tools/css/caseConverter.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,7 +14,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   </head>
   <body>
@@ -35,12 +33,15 @@
           <button id="clear" ng-click="yourText = null" class="btn btn-danger">CLEAR</button>
         </div>
         <div id="result">
-          <textarea id="changedText" ng-model="yourText" rows="6" cols="60" readonly placeholder="Your Result Shows here..."></textarea>
+          <textarea id="changedText" class="copytextarea" ng-model="yourText" rows="6" cols="60" readonly placeholder="Your Result Shows here..."></textarea>
         </div>
+        <button id="copy" class="btn btn-primary textareacopybtn">Copy to clipboard</button>
       </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="../assets/tools/js/caseConverter.js"></script>
+    <script src="../assets/global/js/global.js"></script>
   </body>
 </html>
