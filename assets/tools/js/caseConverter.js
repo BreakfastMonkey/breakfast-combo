@@ -1,20 +1,19 @@
 
 /*JavaScript only for case Converter*/
+function activeHandler (id1,id2,id3){
+  $(id1).addClass("active");
+  $(id2).removeClass("active");
+  $(id3).removeClass("active");
+}
 $("#upper").click(function(){
   $("#changedText").css("text-transform", "uppercase");
-  $("#upper").addClass("active");
-  $("#lower").removeClass("active");
-  $("#capital").removeClass("active");
+  activeHandler("#upper","#lower","#capital");
 });
 $("#lower").click(function(){
   $("#changedText").css("text-transform", "lowercase");
-  $("#lower").addClass("active");
-  $("#upper").removeClass("active");
-  $("#upper").removeClass("active");
+  activeHandler("#lower","#upper","#capital");
 });
 $("#capital").click(function(){
   $("#changedText").css("text-transform", "Capitalize");
-  $("#capital").addClass("active");
-  $("#lower").removeClass("active");
-  $("#upper").removeClass("active");
+  activeHandler("#capital","#lower","#upper");
 });
