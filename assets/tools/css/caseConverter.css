@@ -8,6 +8,6 @@ textarea {width: 95%;}
 #buttons {margin:30px 0 0 0;padding:0 0 30px 0;}
 #buttons button {margin: 0 10px 10px 10px;}
 #clear {margin-top: 20px;}
-#changedText {text-transform: uppercase;font-size: 16px; background-color: #eee;border:0;}
+#changedText {font-size: 16px; background-color: #eee;border:0;}
 #result {background-color: #eee;}
 #copy {margin: 40px auto 0 auto;}
