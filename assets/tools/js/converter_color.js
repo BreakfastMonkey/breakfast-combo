@@ -15,8 +15,8 @@ $("#toRgb").click(function(){
     $("#toHex").removeClass("active");
 });
 $("#toHex").click(function(){
-	var number = $("#textInput").val();
-    $("#changedText").val(rgbToHex(number,number,number));
+	var number1 = Number($("#textInput").val())；
+    $("#changedText").val(rgbToHex(number1,number1,number1));
     $("#toRgb").removeClass("active");
     $("#toHex").addClass("active");
 });
