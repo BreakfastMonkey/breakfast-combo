@@ -1,0 +1,22 @@
+.container {
+	position: fixed;;
+	margin: 0 auto;
+	left: 50%;
+	top: 50%;
+}
+
+#wrapper {
+	position: absolute;
+	left: -180px;
+	top: -25px;
+}
+
+input {
+	width: 260px;
+	height: 50px;
+	outline: none;
+	border: none;
+	border-bottom: 1px #999 dashed;
+	font-size: 30px;
+	margin: 10px 0;
+}
