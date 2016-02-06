@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="sb-init sb-active sb-active-left">
+	
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="description" content="Web Development Kits for developers">
+		<meta name="keywords" content="HTML, CSS, XML, JavaScript, Web Developer, Tools">
+		<meta name="author" content="Ke Huang, Yayi Wang, Yichao Li, Xiaolu Liu">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Webkit for Developers</title>
+
+		<link type="text/css" href="css/plugins/simple-sidebar.css" rel="stylesheet"/>
+		<link type="text/css" href="css/style.css" rel="stylesheet"/>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/tools/css/caseConverter.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<div id="wrapper">
+
+			<!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li>
+            <a href="#">Dashboard</a>
+          </li>
+          <li>
+            <a href="#">Shortcuts</a>
+          </li>
+          <li>
+            <a href="#">Overview</a>
+          </li>
+          <li>
+            <a href="#">Events</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+			<div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">         
+              <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+
+              <div ng-app>
+					      <div>
+					        <div id="pageTitle">
+					          <h1>Easy to use Case Converter</h1>
+					          <h3>Paste and click, you will get your desired text case!</h3>
+					        </div>
+					        <div id="textBox">
+					          <textarea id="textInput" ng-model="yourText" rows="6" cols="60" autofocus placeholder="Type or paste your content here..."></textarea>
+					        </div>
+					        <div id="buttons">
+					          <button id="upper" class="btn btn-primary active">UPPER CASE</button>
+					          <button id="lower" class="btn btn-primary">lower case</button>
+					          <button id="capital" class="btn btn-primary">Capitalize</button>
+					          <button id="clear" ng-click="yourText = null" class="btn btn-danger">CLEAR</button>
+					        </div>
+					        <div id="result">
+					          <textarea id="changedText" class="copytextarea" ng-model="yourText" rows="6" cols="60" readonly placeholder="Your Result Shows here..."></textarea>
+					        </div>
+					        <button id="copy" class="btn btn-primary textareacopybtn">Copy to clipboard</button>
+					      </div>
+					    </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+		</div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="../assets/tools/js/caseConverter.js"></script>
+    <script src="../assets/global/js/global.js"></script>
+
+		<script>
+			$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+	    });
+		</script>
+
+	</body>
+</html>
+
