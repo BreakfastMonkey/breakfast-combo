@@ -7,8 +7,8 @@
 
 #wrapper {
 	position: absolute;
-	left: -180px;
-	top: -25px;
+	left: -131px;
+	top: -73px;
 }
 
 input {
@@ -19,4 +19,5 @@ input {
 	border-bottom: 1px #999 dashed;
 	font-size: 30px;
 	margin: 10px 0;
+	background: transparent;
 }

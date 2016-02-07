@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="colorConverterTool" ng-controller="colorConverterCtrl">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,16 +14,15 @@
         <![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     </head>
-    <body>
-        <div class="container" ng-app>
+    <body ng-style="bgStyle">
+        <div class="container">
             <div id="wrapper">
-                <input id="hexInput" type="text" ng-model="hexValue" autofocus placeholder="Hex"/>
-                <input id="rgbInput" type="text" ng-model="rgbValue" autofocus placeholder="RGB"/>
+                <input id="hexInput" type="text" ng-model="hexValue" ng-change="toRgb(); bgStyle={'background': newColor}" autofocus placeholder="hex"/>
+                <input id="rgbInput" type="text" ng-model="rgbValue" ng-change="toHex()" autofocus placeholder="rgb"/>
             </div>
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="../assets/global/js/global.js"></script>
         <script src="../assets/tools/js/colorConverter.js"></script>
     </body>
 </html>
