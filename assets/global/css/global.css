@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic);
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  background: #2f4050;
+  border-radius: 0;
+  border: none;
+}
+
+.navbar li a, .navbar a {
+  text-shadow: none;
+  color: #fff !important;
+}
+
+.navbar .fa-bars {
+	margin-top: 10px;
+}
+
+.navbar .fa-bars:hover {
+	color: #23c6c8;
+}

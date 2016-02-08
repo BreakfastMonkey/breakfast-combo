@@ -7,8 +7,11 @@
     <title>Text Case Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../assets/tools/css/caseConverter.css">
+    <link rel="stylesheet" type="text/css" href="../assets/global/css/global.css">
     <link type="text/css" href="../assets/global/css/plugins/simple-sidebar.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="../assets/tools/css/caseConverter.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,12 +20,25 @@
     <![endif]-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   </head>
+
   <body>
+
+  
   <div id="wrapper">
     <div id="sidebar-wrapper"></div>
 
-    <div id="page-content-wrapper" ng-app>
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="brand" href="#menu-toggle" id="menu-toggle">
+            <i class="fa fa-bars fa-2x"></i>
+          </a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="page-content-wrapper" ng-app>
+      <div id="content" class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
             <div id="pageTitle">
@@ -51,7 +67,8 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="../assets/tools/js/caseConverter.js"></script>
   <script src="../assets/global/js/global.js"></script>
+  <script src="../assets/tools/js/caseConverter.js"></script>
+
   </body>
 </html>
