@@ -1,31 +1,37 @@
 
-/*JavaScript only for case Converter*/
-function activeHandler (id1,id2,id3){
+/*JavaScript only for url decoder encoder*/
+function activeHandler (id1,id2){
   $(id1).addClass("active");
   $(id2).removeClass("active");
-  $(id3).removeClass("active");
 }
-$("#upper").click(function(){
-  $("#changedText").css("text-transform", "uppercase");
-  activeHandler("#upper","#lower","#capital");
-});
-$("#lower").click(function(){
-  $("#changedText").css("text-transform", "lowercase");
-  activeHandler("#lower","#upper","#capital");
-});
-$("#capital").click(function(){
-  $("#changedText").css("text-transform", "Capitalize");
-  activeHandler("#capital","#lower","#upper");
-});
 
+function rmAvtive(){
+$("#decoder").removeClass("active");
+$("#encoder").removeClass("active");
+}
 
 function encode() {
-	var obj = document.getElementById('dencoder');
-	var unencoded = obj.value;
-	obj.value = encodeURIComponent(unencoded).replace(/'/g,"%27").replace(/"/g,"%22");	
+	 var encoded = encodeURIComponent($('#changedText').val());	
+   $('#changedText').val(encoded);
 }
 function decode() {
-	var obj = document.getElementById('dencoder');
-	var encoded = obj.value;
-	obj.value = decodeURIComponent(encoded.replace(/\+/g,  " "));
+	var decoded = decodeURIComponent($('#changedText').val());
+  $('#changedText').val(decoded);
 }
+
+$("#decoder").click(function(){
+  if ( !($('#decoder').hasClass('active')) ){
+    activeHandler("#decoder","#encoder");
+    decode();
+  };
+});
+$("#encoder").click(function(){
+  if ( !($('#encoder').hasClass('active')) ){  
+    activeHandler("#encoder","#decoder");
+    encode();
+  };
+});
+
+$("#clear").click(function(){
+  rmAvtive();
+});
