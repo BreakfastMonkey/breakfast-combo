@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Text Case Converter</title>
+        <title>Hex and rgb Converter</title>
 		    <link rel="stylesheet" type="text/css" href="../assets/tools/css/colorConverter.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,11 +18,10 @@
         <div class="container">
             <div id="wrapper">
                 <input id="hexInput" type="text" ng-model="hexValue" ng-change="toRgb(); bgStyle={'background': newColor}" autofocus placeholder="hex"/>
-                <input id="rgbInput" type="text" ng-model="rgbValue" ng-change="toHex()" autofocus placeholder="rgb"/>
+                <input id="rgbInput" type="text" ng-model="rgbValue" ng-change="toHex(); bgStyle={'background': newColor}" autofocus placeholder="rgb"/>
             </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="../assets/tools/js/colorConverter.js"></script>
     </body>
 </html>
