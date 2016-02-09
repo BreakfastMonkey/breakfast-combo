@@ -15,6 +15,11 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #fff !important;
 }
 
+.navbar li a:hover, .navbar li a:focus, .navbar li a:active,
+.navbar a:hover, .navbar a:focus, .navbar a:active {
+	color: #23c6c8 !important;
+}
+
 .navbar .fa-bars {
 	margin-top: 10px;
 }

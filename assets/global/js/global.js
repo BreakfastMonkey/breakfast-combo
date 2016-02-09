@@ -21,19 +21,21 @@ $("#menu-toggle").click(function(e) {
 $("#sidebar-wrapper").load("../assets/global/header.html", function(){	
 
 	$(".sidebar-nav li").on('click', function(){
-	
+
 		if ($(this).find('ul').length != 0) {
 			$(this).toggleClass('active');
 
 			if ($(this).hasClass('active')) {
-				$(this).find('.nav-second-level').first().stop(true, true).slideDown();
+				$(this).find('.nav-second-level').first().stop(true, true).slideDown(200);
 				$('.arrow', this).toggleClass('fa-angle-down fa-angle-left');
 			} else {
-				$(this).find('.nav-second-level').first().stop(true, true).slideUp();
+				$(this).find('.nav-second-level').first().stop(true, true).slideUp(200);
 				$('.arrow', this).toggleClass('fa-angle-left fa-angle-down');
 			}
 
-		} else {
+		}
+
+		else {
 			$(".sidebar-nav li").removeClass('active');
 			$(this).addClass('active');
 		}
