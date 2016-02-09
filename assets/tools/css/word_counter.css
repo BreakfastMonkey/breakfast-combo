@@ -1,12 +1,9 @@
 /*stylesheet only for case Converter*/
-.container {margin:0 auto;padding-top: 0;}
-#wrapper {max-width: 1500px;min-height: 768px; margin:0 auto;background-color: #ddd;text-align: center;}
-#pageTitle {padding:30px 0 0 0;}
 #pageTitle h1 {margin:0 0 10px 0;}
-textarea {width: 95%;}
+textarea {width: 95%; padding: 8px;}
 #buttons {margin:30px 0 0 0;padding:0 0 30px 0;}
 #buttons button {margin: 0 10px 10px 10px;}
 #clear {margin-top: 20px;}
 #changedText {font-size: 16px; background-color: #eee;border:0;}
-#result {background-color: #eee;}
+#result textarea {background-color: #eee;}
 #copy {margin: 40px auto 0 auto;}
