@@ -13,13 +13,24 @@ app.controller('colorConverterCtrl', function($scope) {
             }
         }
 
-        result = (hex.length == 3 || hex.length > 4) ? "rgb(" +
-          parseInt(hex.substring(0,2), 16) + "," +
-          parseInt(hex.substring(2,4), 16) + "," +
-          parseInt(hex.substring(4,6), 16) + ")" : '';
+        if (!isNaN(parseInt(hex.substring(), 16))) {
+            var r = parseInt(hex.substring(0,2), 16);
+            var g = parseInt(hex.substring(2,4), 16);
+            var b = parseInt(hex.substring(4,6), 16);
 
-        $scope.rgbValue = result;
-        $scope.newColor = result;
+            result = (hex.length == 3 || hex.length > 4) ? "rgb(" + r + "," + g + "," + b + ")" : '';
+
+            var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
+
+            if (luma < 100) {
+                $("input").css({ "color":"#fff", "border-bottom":"#fff solid 1px" });
+            } else {
+                $("input").css({ "color":"#333", "border-bottom":"#333 solid 1px" });
+            }
+
+            $scope.rgbValue = result;
+            $scope.newColor = result;
+        }
     }
 
     $scope.toHex = function() {
