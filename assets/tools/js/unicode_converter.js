@@ -4,8 +4,9 @@ var app = angular.module('unicodeConverterTool', []);
 app.controller('unicodeConverterCtrl', function($scope) {
     var unicodeString = '';
     $scope.toUnicode = function() {
-
+      unicodeString = '';
       for (var i = 0; i < $scope.yourText.length; i++) {
+
       var unicodeChar = $scope.yourText.charCodeAt(i).toString(16);
       while(unicodeChar.length < 4){
         unicodeChar = '0' + unicodeChar;
@@ -14,13 +15,8 @@ app.controller('unicodeConverterCtrl', function($scope) {
       unicodeString = unicodeString + unicodeChar;
     }
     $scope.unicodeText = unicodeString;
-
     }
-
-    
 });
-
-
 
 var copyTextareaBtn = document.querySelector('.textareacopybtn');
 
