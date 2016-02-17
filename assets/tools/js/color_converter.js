@@ -20,7 +20,7 @@ app.controller('colorConverterCtrl', function($scope) {
 
             result = (hex.length == 3 || hex.length > 4) ? "rgb(" + r + "," + g + "," + b + ")" : '';
 
-            // var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; 
+            //var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; 
 
             // if (luma < 100) {
             //     $("input").css({ "color":"#fff", "border-bottom":"#fff solid 1px" });
