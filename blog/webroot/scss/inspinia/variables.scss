@@ -1,0 +1,41 @@
+// Font
+$font-stack: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Basic Colors
+$navy: 									#1ab394 !default; // Primary color
+$dark-gray: 						#c2c2c2 !default; // Default color
+$blue: 									#1c84c6 !default; // Success color
+$lazur: 								#23c6c8 !default; // Info color
+$yellow: 								#f8ac59 !default; // Warrning color
+$red: 									#ed5565 !default; // Danger color
+
+// Various colors
+$text-color: 						#676a6c !default; // Body text
+$gray: 									#f3f3f4 !default; // Background wrapper color
+$light-gray: 						#d1dade !default; // Default label, badget
+$label-badget-color: 		#5e5e5e !default;
+$light-blue: 						#f3f6fb !default;
+
+// Spiner color and margin
+$spin-color: 						$navy !default;
+$spin-margin: 					0 auto !default;
+
+// IBOX colors ( default panel colors)
+$border-color: 					#e7eaec !default; // IBox border
+$ibox-title-bg: 				white !default; // IBox Background header
+$ibox-content-bg: 			white !default; // IBox Background content
+
+//Sidebar width
+$sidebar-width: 				220px !default;
+
+// Boxed layout width
+$boxed-width: 					1200px !default;
+$boxed-backgound: 			image-url("patterns/shattered.png") !default;
+
+//Border radius for buttons
+$btn-border-radius: 		3px !default;
+
+//Navigation
+$nav-bg: 								#2f4050 !default;
+$nav-profil-pattern: 		image-url("patterns/header-profile.png") no-repeat !default;
+$nav-text-color: 				#a7b1c2 !default;

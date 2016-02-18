@@ -1,0 +1,242 @@
+@import '_fonts';
+
+@import '_bootstrap_sprockets';
+@import '_bootstrap_variables';
+@import '_bootstrap';
+
+@import '_inspinia_animate';
+@import '_inspinia_variables';
+@import '_inspinia';
+
+//----------------------------------------------------------------------------------------------------------
+
+.dashboard-header {
+	padding-bottom: 0;
+}
+
+.modal-backdrop {
+	z-index: 9990 !important;
+}
+.modal {
+	z-index: 9999 !important;
+}
+
+.ibox {
+	.ibox-title {
+		overflow: hidden;
+		
+		h3 {
+			float: left;
+		}
+		
+		.ibox-tools {
+			
+			.form-group {
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+//-----------------------------------------------------------------------------------------------------Tables-----
+
+.table {
+	
+	& > thead, & > tbody { 
+		& > tr {
+			& > td, & > th {
+				vertical-align: middle;
+				
+				&.compact {
+					white-space: nowrap;
+					width: 1%;
+					
+					a + a {
+						margin-left: 3px;
+					}
+				}
+				
+				&.icon {
+					@extend .compact;
+					font-size: 2em;
+				}
+				
+			}
+		}
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------Forms-----
+
+.required {
+	label:after {
+		content: "*";
+		color: $brand-danger;
+	}
+}
+
+textarea {
+	max-width: 100%;
+}
+
+.input-group-addon {
+	min-width: 40px;
+}
+
+// ---- Submit Button Bigger ----
+
+.submit-big {
+	overflow: hidden;
+	margin-bottom: 25px;
+	border-top: 1px dashed $dark-gray;
+	padding-top: 25px;
+	
+	.btn {
+		@extend .btn-lg;
+		float: right;
+		min-width: 150px;
+	}
+}
+
+.btn-default {
+	background: $brand-info;
+	border: 1px solid darken($brand-info, 5%) !important;
+	
+	&:hover, &:focus {
+		background: darken($brand-info, 5%);
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------Plugins-----
+
+// ---- Timepicker ----
+
+.bootstrap-timepicker-widget {
+	&.timepicker-orient-bottom {
+		&:before, &:after {
+			top: auto !important;
+		}
+	}
+	
+	.icon-chevron-up, .icon-chevron-down {
+		@extend .fa;
+		@extend .fa-2x;
+		color: $navy;
+	}
+	
+	.icon-chevron-up {
+		@extend .fa-angle-up;
+	}
+	.icon-chevron-down {
+		@extend .fa-angle-down;
+	}
+}
+
+// ---- Datepicker ----
+
+.datepicker  {
+	z-index: 3000 !important;
+	table {
+		tr {
+			td {
+				&.active, .active {
+					background: $navy !important;
+					border-color: darken($navy, 10%) !important;
+				}
+			}
+		}
+	}
+}
+	
+
+//-----------------------------------------------------------------------------------------------------Nav-----
+
+.navbar-static-top {
+	margin-bottom: 0;
+	
+	.navbar-header {
+		a {
+			display: block;
+			user-select: none;
+			
+			#nav-logo {
+				height: 60px;
+				padding: 15px 30px;
+				font-size: 30px;
+				line-height: 60px;
+			}
+		}
+	}
+	
+	.navbar-top-links {
+		margin-right: 10px;
+		
+		& > li {
+			margin: 0;
+			
+			& > a {
+				font-size: 1.6em;
+				padding: 15px;
+				
+				&:hover, &:focus {
+					color: $navy;
+				}
+			}
+		}
+	}
+}
+
+// ---- SideNav ----
+
+#side-menu {
+	
+	& > li {
+		& > a {
+			i {
+				margin-right: 8px;
+			}
+		}
+	}
+	
+	.profile-element {
+		p {
+			color: #FFFFFF;
+			margin: 0;
+		}
+	}
+	
+	.special_link {
+		
+		&.active > a, & > a:focus {
+			background: $navy;
+		}
+		
+		& > ul {
+			& > li {
+				& > a {
+					background: none !important;
+					color: $nav-text-color;
+					
+					&:hover, &:focus {
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+	
+	.nav-second-level li a {
+		padding: 7px 10px 7px 42px;
+	}
+}
+
+//-----------------------------------------------------------------------------------------------------Login-----
+
+#login {
+	
+	#login-logo {
+		margin-bottom: 1.5em;
+		max-width: 100%;
+	}
+}
