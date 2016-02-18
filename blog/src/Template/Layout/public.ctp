@@ -16,7 +16,6 @@
           <?php
             if(!empty($breadcrumbs)) {
               foreach($breadcrumbs as $breadcrumb) {
-              
                 if(isset($breadcrumb['active']) && $breadcrumb['active'])
                   echo '<li class="active">' . $breadcrumb['name'] . '</li>';
                 else

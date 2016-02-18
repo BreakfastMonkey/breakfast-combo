@@ -1,4 +1,6 @@
 <div class="row border-bottom">
+<?php if (!empty($this->request->prefix)): ?>
+
 
 	<nav class="navbar navbar-static-top" role="navigation">
 		
@@ -19,4 +21,24 @@
 		
 	</nav>
 	
+
+<?php else: ?>
+	<nav id="custom-header" class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-minimalize" href="#">
+        <i class="fa fa-bars fa-2x"></i>
+      </a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right  navbar-top-links">
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+    </ul> 
+	</nav>
+
+<?php endif;?>
 </div>

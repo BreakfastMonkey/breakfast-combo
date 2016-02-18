@@ -88,7 +88,7 @@ class AppController extends \Cake\Controller\Controller {
     
     if(empty($this->request->params['prefix'])) {
       $this->Auth->allow();
-      $this->viewBuilder()->layout('empty');
+      $this->viewBuilder()->layout('public');
     }
 
     // Set the user logged in
@@ -110,7 +110,13 @@ class AppController extends \Cake\Controller\Controller {
     //Public Nav
     
     $nav = [
-      
+      'main' => [
+        'home' => [
+          'icon' => $this->_icons['user'],
+          'name' => 'Home',
+          'route' => Router::url('/')
+        ],
+      ]
     ];
     
     if(isset($this->request->params['prefix'])) {
@@ -147,7 +153,13 @@ class AppController extends \Cake\Controller\Controller {
               'name' => 'Blogs',
               'route' => ['controller' => 'Articles', 'action' => 'index', 'prefix' => 'admin']
             ],
-            
+
+            'categories' => [
+              'icon' => $this->_icons['cube'],
+              'name' => 'Blog Categories',
+              'route' => ['controller' => 'Categories', 'action' => 'index', 'prefix' => 'admin']
+            ],
+
             'users' => [
               'icon' => $this->_icons['users'],
               'name' => 'Users',

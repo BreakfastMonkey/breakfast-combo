@@ -8,16 +8,16 @@ class UsersTable extends Table {
 	protected $_order = ['Users.role' => 'ASC', 'Users.first_name'];
 	
 	public $roles = [
-		'A' => 'Administrator',
-    'H' => 'Head Office',
-    'F' => 'Franchise Owner'
+		'A' => 'Administrator'
 	];
 
   public function initialize(array $config) {
 		parent::initialize($config);
 		
     $this->addAssociations([
-			
+			'hasMany' => [
+        'Articles'
+      ]
     ]);
   }
 

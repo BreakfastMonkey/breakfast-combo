@@ -187,6 +187,10 @@ textarea {
 	}
 }
 
+#custom-header {
+	background-color: $nav-bg;
+}
+
 // ---- SideNav ----
 
 #side-menu {
@@ -239,4 +243,8 @@ textarea {
 		margin-bottom: 1.5em;
 		max-width: 100%;
 	}
+}
+
+.breadcrumb > li + li::before {
+	content: '/ ';
 }

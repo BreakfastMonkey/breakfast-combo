@@ -33,34 +33,17 @@ Router::scope('/', function ($routes) {
   $routes->connect('/reset-password/*', ['controller' => 'Users', 'action' => 'forgot_password_step_2']);
 
   $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
-
-  /**
-   * Connect catchall routes for all controllers.
-   *
-   * Using the argument `InflectedRoute`, the `fallbacks` method is a shortcut for
-   *    `$routes->connect('/:controller', ['action' => 'index'], ['routeClass' => 'InflectedRoute']);`
-   *    `$routes->connect('/:controller/:action/*', [], ['routeClass' => 'InflectedRoute']);`
-   *
-   * Any route class can be used with this method, such as:
-   * - DashedRoute
-   * - InflectedRoute
-   * - Route
-   * - Or your own route class
-   *
-   * You can remove these routes once you've connected the
-   * routes you want in your application.
-   */
+  /*
+  $routes->connect('/articles/:id/:slug', 
+    ['controller' => 'Articles', 'action' => 'view'],
+    ['pass' => ['id', 'slug']]
+  );*/
   $routes->fallbacks('InflectedRoute');
 });
 
 
 //Prefix
 Router::prefix('admin', function ($routes) {
-  /*
-  $routes->connect('/users/:id/:slug', 
-    ['controller' => 'Users', 'action' => 'edit'],
-    ['pass' => ['id', 'slug']]
-  );*/
   $routes->fallbacks('InflectedRoute');
 });
 
