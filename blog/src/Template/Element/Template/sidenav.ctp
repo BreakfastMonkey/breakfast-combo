@@ -2,8 +2,7 @@
   <div class="sidebar-collapse">
     <ul class="nav" id="side-menu">
       
-      <?php if (isset($authUser) && !empty($authUser) && 
-        $this->request->controller != 'Articles' && $this->request->action != 'view') : ?>
+      <?php if ( $this->request->prefix == 'admin' || $this->request->controller != 'Articles' && $this->request->action != 'view') : ?>
       <li class="nav-header">
         <div class="dropdown profile-element">
           <span>
@@ -60,7 +59,7 @@
         </div>
       </li>
       <?php else: ?>
-        <li class="nav-header">
+        <li id="public-header" class="nav-header">
           <div class="profile-element">
             <h1>WEBKITS</h1>
           </div>
@@ -71,7 +70,7 @@
         
         foreach($nav['main'] as $itemKey => $item) {
           $liClasses = [];
-          
+  
           if(isset($item['children'])) {
             $liClasses[] = 'dropdown';
             

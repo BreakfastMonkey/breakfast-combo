@@ -8,7 +8,8 @@ class ArticlesController extends AppController
 	{
 		$title = 'Blogs';
 
-		$articles = $this->Articles->find();
+		$articles = $this->Articles->find()
+			->contain(['Categories']);
 
 		$this->set(compact('articles', 'title'));	
 	}

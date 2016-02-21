@@ -115,7 +115,7 @@ class AppController extends \Cake\Controller\Controller {
     $nav = [
       'main' => [
         'home' => [
-          'icon' => $this->_icons['user'],
+          'icon' => $this->_icons['fort-awesome'],
           'name' => 'Home',
           'route' => Router::url('/')
         ],
@@ -150,12 +150,6 @@ class AppController extends \Cake\Controller\Controller {
           ],
 
           'main' => [
-            'ckeditor' => [
-              'icon' => $this->_icons['test'],
-              'name' => 'CkEditor Test',
-              'route' => ['controller' => 'App', 'action' => 'ckeditor', 'prefix' => 'admin']
-            ],
-
             'blogs' => [
               'icon' => $this->_icons['pencil-square-o'],
               'name' => 'Blogs',
@@ -180,7 +174,6 @@ class AppController extends \Cake\Controller\Controller {
     
     $nav['active'] = Router::url($this->here);
 
-    //pr($nav['active']);
     return $nav;
   }
   

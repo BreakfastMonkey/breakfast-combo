@@ -20504,11 +20504,6 @@ del {
   }
 }
 
-.article {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .dashboard-header {
   padding-bottom: 0;
 }
@@ -20647,14 +20642,14 @@ textarea {
   color: #23c6c8;
 }
 
-#side-menu li.nav-header {
+#side-menu li#public-header {
   background: transparent url("../img/patterns/header-profile.png");
   border: 0 none;
   padding: 55px 20px;
   text-align: center;
 }
 
-#side-menu li.nav-header h1 {
+#side-menu li#public-header h1 {
   color: #fff;
   font-size: 36px;
   font-weight: 400;
@@ -20698,4 +20693,20 @@ textarea {
 
 .breadcrumb > li + li::before {
   content: '/ ';
+}
+
+.ibox .ibox-title {
+  border-color: #23c6c8;
+}
+
+.ibox h3 {
+  color: #23c6c8;
+}
+
+.ibox a {
+  color: #2f4050;
+}
+
+.ibox a:hover, .ibox a:focus, .ibox a:active {
+  color: #23c6c8;
 }

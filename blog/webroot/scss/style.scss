@@ -8,11 +8,9 @@
 @import '_inspinia_variables';
 @import '_inspinia';
 
+$blue: #23c6c8;
+
 //----------------------------------------------------------------------------------------------------------
-.article {
-	max-width: 960px;
-	margin: 0 auto;
-}
 
 .dashboard-header {
 	padding-bottom: 0;
@@ -199,7 +197,7 @@ textarea {
 		color: #fff;
 
 		&:hover, &:focus, &:active {
-			color: #23c6c8;
+			color: $blue;
 		}
 	}
 }
@@ -209,7 +207,7 @@ textarea {
 #side-menu {
 	
 	li {
-		&.nav-header {
+		&#public-header {
 			background: rgba(0, 0, 0, 0) url("../img/patterns/header-profile.png");
 	    border: 0 none;
 	    padding: 55px 20px;
@@ -224,7 +222,7 @@ textarea {
 		}
 
 		&.active {
-			border-left: 3px solid #23c6c8;
+			border-left: 3px solid $blue;
 		}
 	}
 
@@ -280,4 +278,22 @@ textarea {
 
 .breadcrumb > li + li::before {
 	content: '/ ';
+}
+
+.ibox {
+	.ibox-title {
+		border-color: $blue;
+	}
+
+	h3 {
+		color: $blue;
+	}
+
+	a {
+		color: $nav-bg;
+
+		&:hover, &:focus, &:active {
+			color: $blue;
+		}
+	}
 }
