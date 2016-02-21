@@ -85,8 +85,13 @@ body {
     border-left: 4px solid #2f4050;
 }
 
-.sidebar-nav li:hover, .sidebar-nav li.active {
+.sidebar-nav li.active {
     border-left: 4px solid #23c6c8;
+    background-color: #293846;
+}
+
+.sidebar-nav li:hover {
+    border-left: 4px solid #293846;
     background-color: #293846;
 }
 

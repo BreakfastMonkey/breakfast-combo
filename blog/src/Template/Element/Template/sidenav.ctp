@@ -2,6 +2,8 @@
   <div class="sidebar-collapse">
     <ul class="nav" id="side-menu">
       
+      <?php if (isset($authUser) && !empty($authUser) && 
+        $this->request->controller != 'Articles' && $this->request->action != 'view') : ?>
       <li class="nav-header">
         <div class="dropdown profile-element">
           <span>
@@ -57,6 +59,13 @@
           *
         </div>
       </li>
+      <?php else: ?>
+        <li class="nav-header">
+          <div class="profile-element">
+            <h1>WEBKITS</h1>
+          </div>
+        </li>
+      <?php endif; ?>
       
       <?php
         

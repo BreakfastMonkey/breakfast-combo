@@ -24,20 +24,17 @@
 
 <?php else: ?>
 	<nav id="custom-header" class="navbar navbar-default">
-    <div class="navbar-header">
-      <a class="navbar-minimalize" href="#">
-        <i class="fa fa-bars fa-2x"></i>
-      </a>
+		<div class="container-fluid">
+	    <div class="row">
+	    	<div class="col-xs-24">
+	    		<div class="navbar-header">
+			      <a class="navbar-minimalize" href="#">
+			        <i class="fa fa-bars fa-2x"></i>
+			      </a>
+			    </div>
+	    	</div>
+	    </div>
     </div>
-
-    <ul class="nav navbar-nav navbar-right  navbar-top-links">
-      <li>
-        <a href="#">Blog</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul> 
 	</nav>
 
 <?php endif;?>

@@ -1,5 +1,5 @@
 <div class="footer">
 	<div>
-		<strong>Copyright</strong> MollyMaid &copy; <?php echo date('Y'); ?>
+		<strong>Copyright</strong> Webkits &copy; <?php echo date('Y'); ?>
 	</div>
 </div>

@@ -11,7 +11,11 @@ class UsersController extends \App\Controller\AppController {
   public function initialize() {
     parent::initialize();
     
-    $this->Auth->allow('register');
+    //$this->Auth->allow('register');
+
+    if (in_array($this->request->action, ['register', 'login', 'forgot_password_step_1', 'forgot_password_step_2']))
+      $this->viewBuilder()->layout('empty');
+
   }
   
   public function register() {
@@ -72,6 +76,7 @@ class UsersController extends \App\Controller\AppController {
         $this->Flash->error('Invalid email or password');
       }
     }
+
   }
   
   public function logout() {

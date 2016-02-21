@@ -9,6 +9,10 @@
 @import '_inspinia';
 
 //----------------------------------------------------------------------------------------------------------
+.article {
+	max-width: 960px;
+	margin: 0 auto;
+}
 
 .dashboard-header {
 	padding-bottom: 0;
@@ -189,12 +193,41 @@ textarea {
 
 #custom-header {
 	background-color: $nav-bg;
+
+	.fa-bars {
+		margin-top: 10px;
+		color: #fff;
+
+		&:hover, &:focus, &:active {
+			color: #23c6c8;
+		}
+	}
 }
 
 // ---- SideNav ----
 
 #side-menu {
 	
+	li {
+		&.nav-header {
+			background: rgba(0, 0, 0, 0) url("../img/patterns/header-profile.png");
+	    border: 0 none;
+	    padding: 55px 20px;
+	    text-align: center;
+
+	    h1 {
+	    	color: #fff;
+	    	font-size: 36px;
+	    	font-weight: 400;
+	    	margin: 0;
+	    }
+		}
+
+		&.active {
+			border-left: 3px solid #23c6c8;
+		}
+	}
+
 	& > li {
 		& > a {
 			i {

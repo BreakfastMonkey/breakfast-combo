@@ -96,10 +96,13 @@ class AppController extends \Cake\Controller\Controller {
       $Users = TableRegistry::get('Users');
       $this->_user = $Users->get($this->Auth->user('id'));
       $this->set('authUser', $this->_user);
+      $authUser = $this->_user;
     }
     else {
-      $this->set('authUser', false);
+      $authUser = false;
     }
+
+    $this->set(compact($authUser));
     
     $nav = $this->_setNav();
     $this->set(compact('nav'));
@@ -115,6 +118,11 @@ class AppController extends \Cake\Controller\Controller {
           'icon' => $this->_icons['user'],
           'name' => 'Home',
           'route' => Router::url('/')
+        ],
+        'blogs' => [
+          'icon' => $this->_icons['pencil-square-o'],
+          'name' => 'Blogs',
+          'route' => ['controller' => 'Articles', 'action' => 'index', 'prefix' => false]
         ],
       ]
     ];
