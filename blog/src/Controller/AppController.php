@@ -96,13 +96,12 @@ class AppController extends \Cake\Controller\Controller {
       $Users = TableRegistry::get('Users');
       $this->_user = $Users->get($this->Auth->user('id'));
       $this->set('authUser', $this->_user);
-      $authUser = $this->_user;
     }
     else {
-      $authUser = false;
+      $this->set('authUser', false);
     }
 
-    $this->set(compact($authUser));
+   // $this->set(compact($authUser));
     
     $nav = $this->_setNav();
     $this->set(compact('nav'));

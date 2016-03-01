@@ -20695,18 +20695,18 @@ textarea {
   content: '/ ';
 }
 
-.ibox .ibox-title {
+.article .ibox .ibox-title {
   border-color: #23c6c8;
 }
 
-.ibox h3 {
+.article .ibox h3 {
   color: #23c6c8;
 }
 
-.ibox a {
+.article .ibox a {
   color: #2f4050;
 }
 
-.ibox a:hover, .ibox a:focus, .ibox a:active {
+.article .ibox a:hover, .article .ibox a:focus, .article .ibox a:active {
   color: #23c6c8;
 }

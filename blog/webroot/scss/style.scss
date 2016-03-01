@@ -280,20 +280,23 @@ textarea {
 	content: '/ ';
 }
 
-.ibox {
-	.ibox-title {
-		border-color: $blue;
-	}
+.article {
+	.ibox {
+		.ibox-title {
+			border-color: $blue;
+		}
 
-	h3 {
-		color: $blue;
-	}
-
-	a {
-		color: $nav-bg;
-
-		&:hover, &:focus, &:active {
+		h3 {
 			color: $blue;
 		}
+
+		a {
+			color: $nav-bg;
+
+			&:hover, &:focus, &:active {
+				color: $blue;
+			}
+		}
 	}
+
 }

@@ -2,7 +2,7 @@
   <div class="sidebar-collapse">
     <ul class="nav" id="side-menu">
       
-      <?php if ( $this->request->prefix == 'admin' || $this->request->controller != 'Articles' && $this->request->action != 'view') : ?>
+      <?php if ( $this->request->prefix == 'admin' && $this->request->controller != 'Articles' && $this->request->action != 'view') : ?>
       <li class="nav-header">
         <div class="dropdown profile-element">
           <span>
