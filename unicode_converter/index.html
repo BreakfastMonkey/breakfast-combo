@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Text Case Converter</title>
+    <title>Unicode Converter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../assets/global/css/global.css">
@@ -50,8 +50,11 @@
               <div id="result">
                 <textarea id="changedText" class="copytextarea" ng-model="unicodeText" rows="6" cols="60" readonly placeholder="Your Result Shows here..."></textarea>
               </div>
-              <button id="copy" class="btn btn-primary textareacopybtn">Copy to clipboard</button>
-               
+              <button id="copy" class="btn btn-primary textareacopybtn">Copy to clipboard<span id="copy_legal">&#8224;</span></button>
+              <div id="bottom_text">
+                <p>&#8224; Please be aware that copy to clipboard function only works for up-to-date modern browsers, if it doesn't work for you please copy your text manually. To do that you just need to select everything you want from the above result box and press CTL + c for winsows user and Command + c for OSX user.</p>
+                <p>* If you like our Unicode Converter, please press CTL + d for windows user and Command + d for OSX user to add to your bookmark! Thanks and enjoy!</p>
+              </div>
             </div>
           </div>
           <div class="row bottom_ad">

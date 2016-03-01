@@ -29,7 +29,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .bottom_ad {position:fixed;bottom:0;width:100%;margin-bottom: 30px;}
-
+#bottom_text { margin-top: 20px; }
+#copy_legal {font-size: 10px; line-height: 0; vertical-align: 6px;}
 @media (max-width: 768px) {
 	.bottom_ad {position:relative !important;width:100%;margin-top: 30px;}
 
